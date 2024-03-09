@@ -1,4 +1,4 @@
-var url = "https://quantomphysics.sciencesimplified.pro/"
+var url = prompt("URL with http://");
 var urlObj = new window.URL(window.location.href); 
 win = window.open(); win.document.body.style.margin = "0"; 
 win.document.body.style.height = "100vh"; 
