@@ -6,5 +6,5 @@ stl.width = '100vw';
 stl.height = '100vh';
 stl.position = 'fixed';
 stl.left = stl.right = stl.top = stl.bottom = '0';
-iframe.src = "https://quantamphysics.sciencesimplified.pro/"
+iframe.src = "https://quantomphysics.sciencesimplified.pro/"
 tab.document.body.appendChild(iframe);
