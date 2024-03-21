@@ -1,4 +1,4 @@
-if(document.body.contentEditable !== 'true') {
+if (document.body.contentEditable !== 'true') {
   document.body.contentEditable = 'true'; 
   document.designMode='on'; void 0
 } else {    
