@@ -963,6 +963,7 @@
     <script>
         function execute(code) {
             window.parent.postMessage("execute:" + code, '*');
+            alert("exec");
         }
         // scripts list functions
         function init() {
