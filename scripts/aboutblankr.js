@@ -1,7 +1,8 @@
-var url = prompt("URL with http://");
+var url = "https://google.com"; //enter custom
 var urlObj = new window.URL(window.location.href); 
 win = window.open(); win.document.body.style.margin = "0"; 
 win.document.body.style.height = "100vh"; 
+win.document.body.title = "New Tab"
 var iframe = win.document.createElement("iframe"); 
 iframe.style.border = "none"; 
 iframe.style.width = "100%"; 
