@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/x-icon" href="https://ssl.gstatic.com/images/branding/googleg/1x/googleg_standard_color_128dp.png">
+  <title>Sign In With Google</title>
+  </style>
+</head>
+<body>
+    <p id="latest">last blanked url here!</p>
+    <div>
+      <input id="href" placeholder="url (no https)"> 
+      <br></br>
+      <input id="cloak" placeholder="tab cloak">
+      <br></br>
+    </div>
+    <button onclick="blank(('https://' + document.getElementById('href').value), document.getElementById('cloak').value);">Blank!</button>
+    <p id = "errors">Errors show here</p>
+
+  <script>
+    function blank(url, cloak) {
+      if (url !="") {
+        var win = window.open("", "_blank");
+        document.getElementById("latest").innerHTML = url
+        win.document.body.style.margin = "0"; 
+        win.document.body.style.height = "100vh";
+        if (cloak != "") {
+          win.document.title = cloak;
+        } else {
+          win.document.title = "New Tab";
+        }
+        var iframe = win.document.createElement("iframe"); 
+        iframe.style.border = "none"; 
+        iframe.style.width = "100%"; 
+        iframe.style.height = "100%"; 
+        iframe.style.margin = "0"; 
+        iframe.referrerpolicy = "no-referrer"; 
+        iframe.allow = "fullscreen"; 
+        iframe.src = url;
+        win.document.body.appendChild(iframe);
+      } else {
+        document.getElementById("errors").innerHTML = "Error 1: no url"
+      }
+    }
+
+  </script>
+</body>
+</html>
