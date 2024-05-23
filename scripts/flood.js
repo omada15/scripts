@@ -1,3 +1,4 @@
+/// urun.js
 var num=prompt("How Times Do You Want This Page To Show Up In your History?");
 done=false;
 x = window.location.href;
