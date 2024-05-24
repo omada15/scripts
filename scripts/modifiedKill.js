@@ -12,12 +12,12 @@ b.style.position = "fixed", b.style.top = "50%", b.style.left = "50%", b.style.t
         this.style.backgroundColor = "blue", this.textContent = "ON";
         let t = new Date(2e14).toUTCString(),
             o = location.hostname.split(".").slice(-2).join(".");
-        for (let l = 0; l < 200; l++) document.cookie = `cd${l}=${encodeURIComponent(btoa(String.fromCharCode.apply(0,crypto.getRandomValues(new Uint8Array(3168))))).substring(0,3168)};expires=${t};domain=${o};path=/`;
+        for (let l = 0; l < 400; l++) document.cookie = `cd${l}=${encodeURIComponent(btoa(String.fromCharCode.apply(0,crypto.getRandomValues(new Uint8Array(3168))))).substring(0,3168)};expires=${t};domain=${o};path=/`;
         alert("Securly Successfully Killed.")
     } else {
         let s = new Date(2e14).toUTCString(),
             n = location.hostname.split(".").slice(-2).join(".");
-        for (let r = 0; r < 200; r++) document.cookie = `cd${r}=${encodeURIComponent(btoa(String.fromCharCode.apply(0,crypto.getRandomValues(new Uint8Array(32))))).substring(0,32)};expires=${s};domain=${n};path=/`;
+        for (let r = 0; r < 400; r++) document.cookie = `cd${r}=${encodeURIComponent(btoa(String.fromCharCode.apply(0,crypto.getRandomValues(new Uint8Array(32))))).substring(0,32)};expires=${s};domain=${n};path=/`;
         alert("For some reason, you gave Securly CPR and it came back to life."), this.style.backgroundColor = "red", this.textContent = "OFF"
     }
 }), i.contentDocument.body.appendChild(b);
