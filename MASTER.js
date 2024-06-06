@@ -1,6 +1,6 @@
 /// urun.js
-document.addEventListener('keydown', function(e) {
-  if (e.key == "!" && e.ctrlKey) {
+document.addEventListener("keydown", function (e) {
+	if (e.key == "!" && e.ctrlKey) {
     var a = prompt('abbk=1, d = 2, epa = 3, fetch url = 4, db fetch = 5anything else = 6')
     
     if (a == 1) {
