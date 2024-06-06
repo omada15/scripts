@@ -29,4 +29,4 @@ document.addEventListener("keydown", function (e) {
     }
   }
 });
-var p2 = window.open("", "_blank", "width=500,height=300");
+alert('hi');
