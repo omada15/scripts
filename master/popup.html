@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset = "utf-8">
+    <title>master</title>
+    <link href="https://topg916.github.io/TopG916/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <button onclick="send('1');">abbk</button>
+    <script>
+      function send(msg) {
+        window.parent.postMessage(msg, "*");
+      }
+    </script>
+  </body>
+  
+</html>
