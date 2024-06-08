@@ -9,7 +9,7 @@
     <button onclick="send('1');">abbk</button>
     <script>
       function send(msg) {
-        window.parent.postMessage(msg, "*");
+        window.opener.postMessage(msg, "*");
       }
     </script>
   </body>
