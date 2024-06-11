@@ -29,3 +29,9 @@ window.addEventListener("message", function(e) {
   }
   
 });
+
+document.addEventListener("keydown", function (e) {
+  if (e.key == "!" && e.ctrlKey) {
+    launch();
+  }
+});
