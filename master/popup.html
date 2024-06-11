@@ -6,12 +6,29 @@
     <link href="https://topg916.github.io/TopG916/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <button onclick="send('1');">abbk</button>
+    <button onclick='send("1");'>abbk</button>
+    <p></p>
+    <button onclick='send("2");'>duo</button>
+    <p></p>
+    <button onclick='send("3");'>epa</button>
+    <p></p>
+    <button onclick='send("4");'>fetch</button>
+    <p></p>
+    <button onclick='send("5");'>file</button>
+    <p></p>
+    <button onclick='sendEvalData()'>eval</button>
+    <input type="text" id="code" placeholder="code"></input>
     <script>
+      function sendEvalData(msg) {
+        window.opener.postMessage("6", "*");
+        window.opener.postMessage(document.getElementById("code").value, "*");
+        this.close()
+      }
       function send(msg) {
         window.opener.postMessage(msg, "*");
+        this.close()
       }
     </script>
   </body>
-  
+
 </html>
