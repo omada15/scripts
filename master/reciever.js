@@ -1,6 +1,7 @@
 /// urun.js
 document.addEventListener("keydown", function (e) {
   if (e.key == "!" && e.ctrlKey) {
+    console.log("run");
     var win = window.open("", "_blank", "width=500,height=300")
     win.document.write("<script> fetch('https://topg916.github.io/scripts/master/popup.html').then(r => r.text()).then(r => document.write(r)) </script>")
     function f(url) {
@@ -12,7 +13,7 @@ document.addEventListener("keydown", function (e) {
     window.addEventListener("message", function(e) {
       var a = e.data;
       console.log(a)
-    
+
       if (a == 1) {
         var popup = window.open("", "_blank", "width=500,height=300");
         popup.document.write("<script> fetch('https://topg916.github.io/scripts/aboutblanker/blank.html').then(r => r.text()).then(r => document.write(r)) </script>");
@@ -29,7 +30,7 @@ document.addEventListener("keydown", function (e) {
       } else {
         eval(a);
       }
-      
+
     });
   }
 });
