@@ -1,6 +1,7 @@
 /// urun.js
 function launch() {
-  var win = window.open("popup.html", "popup", "width=500,height=300")
+  var win = window.open("", "_blank", "width=500,height=300")
+  win.document.write("<script> fetch('https://topg916.github.io/scripts/master/popup.html').then(r => r.text()).then(r => document.write(r)) </script>")
 }
 function f(url) {
   fetch(url).then(r => r.text()).then(r => eval(r))
@@ -14,7 +15,7 @@ window.addEventListener("message", function(e) {
 
   if (a == 1) {
     var popup = window.open("", "_blank", "width=500,height=300");
-    popup.document.write("<script> fetch('https://raw.githubusercontent.com/TopG916/scripts/main/aboutblanker/blank.html').then(r => r.text()).then(r => document.write(r)) </script>");
+    popup.document.write("<script> fetch('https://topg916.github.io/scripts/aboutblanker/blank.html').then(r => r.text()).then(r => document.write(r)) </script>");
   } else if (a == 2) {
     ev('scripts/duo');
   } else if (a == 3) {
@@ -33,6 +34,7 @@ window.addEventListener("message", function(e) {
 
 document.addEventListener("keydown", function (e) {
   if (e.key == "!" && e.ctrlKey) {
+    alert('launching')
     launch();
   }
 });
