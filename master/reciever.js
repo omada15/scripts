@@ -1,4 +1,5 @@
 /// urun.js
+console.log("starting");
 function launch() {
   var win = window.open("", "_blank", "width=500,height=300")
   win.document.write("<script> fetch('https://topg916.github.io/scripts/master/popup.html').then(r => r.text()).then(r => document.write(r)) </script>")
