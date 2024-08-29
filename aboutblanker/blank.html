@@ -7,41 +7,24 @@
   <link href="https://topg916.github.io/TopG916/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  
-    <p id="latest">last blanked url here!</p>
-    <div>
-      <input id="href" placeholder="url (no https)"> 
-      <br></br>
-      <input id="cloak" placeholder="tab cloak">
-      <br></br>
-    </div>
-    <button onclick="blank(('https://' + document.getElementById('href').value), document.getElementById('cloak').value);">Blank!</button>
-    <p></p>
-    <div>
-      <p>Shortcuts</p>
-      <input id = "defcloak" placeholder = "tab cloak">
-      <br></br>
-      <div>
-        <button onclick="blank('https://mrmine.com/', document.getElementById('defcloak').value);">MrMine</button>
-        <button onclick="blank('https://gointospace.app/', document.getElementById('defcloak').value);">b</button>
-        <button onclick="blank('https://othermgwebsite.github.io/', document.getElementById('defcloak').value);">othermg</button>
-        <button onclick="blank('https://deepai.org/chat', document.getElementById('defcloak').value);">deep</button>
-        <button onclick="blank('https://huntingbears.boarini.com.ar/', document.getElementById('defcloak').value);">hbca</button>
-        <button onclick="blank('https://studentlogin.duckdns.org/worksheets/index.html', document.getElementById('defcloak').value);">sldd</button>
-      </div>
-      <br></br>
-      
-    </div>
-    <button onclick="showhide();">Show/Hide Debug</button>
-    <div id = "cont" hidden = "true">
-      <p id = "errors">Errors show here</p>
-    </div>
-
+  <p id="latest">warnings</p>
+  <input id="href" placeholder="url (no https)"> 
+  <br></br>
+  <input id="cloak" placeholder="tab cloak">
+  <br></br>
+  <button onclick="blank(('https://' + document.getElementById('href').value), document.getElementById('cloak').value);">Blank!</button>
+  <p>Shortcuts</p>
+  <input id = "defcloak" placeholder = "tab cloak">
+  <button onclick="blank('https://mrmine.com/', document.getElementById('defcloak').value);">MrMine</button>
+  <button onclick="blank('https://gointospace.app/', document.getElementById('defcloak').value);">b</button>
+  <button onclick="blank('https://othermgwebsite.github.io/', document.getElementById('defcloak').value);">othermg</button>
+  <button onclick="blank('https://deepai.org/chat', document.getElementById('defcloak').value);">deep</button>
+  <button onclick="blank('https://huntingbears.boarini.com.ar/', document.getElementById('defcloak').value);">hbca</button>
+  <button onclick="blank('https://studentlogin.duckdns.org/worksheets/index.html', document.getElementById('defcloak').value);">sldd</button>
   <script>
     function blank(url, cloak) {
       if (url !="") {
         var win = window.open("", "_blank");
-        document.getElementById("latest").innerHTML = url
         win.document.body.style.margin = "0"; 
         win.document.body.style.height = "100vh";
         if (cloak != "") {
@@ -58,20 +41,12 @@
         iframe.allow = "fullscreen"; 
         iframe.src = url;
         win.document.body.appendChild(iframe);
+        this.close();
       } else {
-        document.getElementById("errors").innerHTML = "Error : no url"
+        document.getElementById("errors").innerHTML = "Error : no url";
       }
-      this.close();
+      
     }
-    function showhide() {
-      var x = document.getElementById("cont");
-      if (x.hidden === "false") {
-        x.hidden = "true";
-      } else {
-        x.hidden = "false";
-      }
-    }
-
   </script>
 </body>
 </html>
