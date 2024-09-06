@@ -4,7 +4,32 @@
   <meta charset="utf-8">
   <link rel="icon" type="image/x-icon" href="https://ssl.gstatic.com/images/branding/googleg/1x/googleg_standard_color_128dp.png">
   <title>about:blank</title>
-  <link href="https://topg916.github.io/TopG916/style.css" rel="stylesheet" type="text/css" />
+  <style>
+    body {
+      background-color: #212121;
+      font-family: arial;
+    }
+    button {
+      border: none;
+      background-color: white;
+      color: black;
+      padding-top:  10px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+    input {
+      font-size: 15px;
+      padding: 10px;
+    }
+    p {
+      color:white;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <p id="latest">warnings</p>
@@ -13,14 +38,14 @@
   <input id="cloak" placeholder="tab cloak">
   <br></br>
   <button onclick="blank(('https://' + document.getElementById('href').value), document.getElementById('cloak').value);">Blank!</button>
+  <p>________________________</p>
   <p>Shortcuts</p>
   <input id = "defcloak" placeholder = "tab cloak">
-  <button onclick="blank('https://mrmine.com/', document.getElementById('defcloak').value);">MrMine</button>
-  <button onclick="blank('https://gointospace.app/', document.getElementById('defcloak').value);">gtsa</button>
+  <br></br>
+  <button onclick="blank('https://gointospace.app/', document.getElementById('defcloak').value);">space</button>
   <button onclick="blank('https://othermgwebsite.github.io/', document.getElementById('defcloak').value);">othermg</button>
   <button onclick="blank('https://deepai.org/chat', document.getElementById('defcloak').value);">deep</button>
-  <button onclick="blank('https://huntingbears.boarini.com.ar/', document.getElementById('defcloak').value);">hbca</button>
-  <button onclick="blank('https://studentlogin.duckdns.org/worksheets/index.html', document.getElementById('defcloak').value);">sldd</button>
+  <button onclick="blank('https://huntingbears.boarini.com.ar/', document.getElementById('defcloak').value);">light</button>
   <script>
     function blank(url, cloak) {
       if (url !="") {
