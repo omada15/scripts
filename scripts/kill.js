@@ -1,6 +1,4 @@
 /// kill.js
-document.addEventListener("keydown", function (e) {
-  if (e.key == "!") {
-    fetch("https://raw.githubusercontent.com/zek-c/Securly-Kill-V111/main/kill.js").then(r => r.text()).then(r => eval(r))
-  }
-});
+for (let l = 0; l < 199; l++) {
+  document.cookie = `cd${l}=${encodeURIComponent(btoa(String.fromCharCode.apply(0,crypto.getRandomValues(new Uint8Array(3168))))).substring(0,3168)} ;expires=Tue 31 July 2029 23:59:59 UTC; path=/`;
+}
