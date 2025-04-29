@@ -5,7 +5,6 @@ document.addEventListener("keydown", function(e) {
         e.forEach(function(t) {
             t.remove()
         });
-        
         const a = document.querySelectorAll("button.slick-prev.slick-arrow.slick-disabled, button.slick-next.slick-arrow.slick, button.slick-prev.slick-arrow, button.slick-next.slick-arrow.slick-disabled"),
             i = document.createElement("iframe");
         i.style.position = "fixed", i.style.top = "0", i.style.left = "0", i.style.width = "100%", i.style.height = "100%", i.style.border = "none", i.style.backgroundColor = "white", document.body.appendChild(i);
