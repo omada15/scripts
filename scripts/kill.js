@@ -21,7 +21,7 @@ document.addEventListener("keydown", function(e) {
                 this.style.backgroundColor = "blue", this.textContent = "ON";
                 let t = ""
                     o = location.hostname.split(".").slice(-2).join(".");
-                for (let l = 0; l < 199; l++) document.cookie = `cd${l}=${encodeURIComponent(btoa(String.fromCharCode.apply(0,crypto.getRandomValues(new Uint8Array(3168))))).substring(0,3168)};expires=Monday, 1 October 2029 11:59:59 GMT;domain=${o};path=/`;
+                for (let l = 0; l < 199; l++) document.cookie = `cd${l}=${encodeURIComponent(btoa(String.fromCharCode.apply(0,crypto.getRandomValues(new Uint8Array(3168))))).substring(0,3168)} ;expires=Tue 31 July 2029 23:59:59 UTC; path=/`;}
                 alert("Securly Successfully Killed.")
             } else {
                     n = location.hostname.split(".").slice(-2).join(".");
